@@ -1,0 +1,30 @@
+{
+    "Data Scientist": {
+        "timeline": [
+            {
+                "skill": "Python",
+                "area": "AI",
+                "project": "Number guessing game",
+                "course": "Python for Everybody - Coursera"
+            },
+            {
+                "skill": "Pandas",
+                "area": "Data Analytics",
+                "project": "Netflix Dataset Analysis",
+                "course": "Data Analysis with Python - FreeCodeCamp"
+            },
+            {
+                "skill": "SQL",
+                "area": "Data Analytics",
+                "project": "Sales Data Dashboard",
+                "course": "Intro to SQL - Khan Academy"
+            },
+            {
+                "skill": "Scikit-learn",
+                "area": "Machine Learning",
+                "project": "Titanic ML Predictor",
+                "course": "ML with Scikit-learn - Kaggle"
+            }
+        ]
+    }
+}
