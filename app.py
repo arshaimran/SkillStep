@@ -9,7 +9,7 @@ st.markdown("Create your personalized career roadmap, tailored to your current s
 
 with st.form("user_form"):
     name = st.text_input("Your Name")
-    degree = st.selectbox("Degree Program", ["BS Data Science", "BS CS", "BBA", "Engineering", "Other"])
+    degree = st.selectbox("Degree Program", ["BS Data Science", "BS Computer Science", "BS Software Engineering", "Other"])
     year = st.selectbox("Current Year", ["1st", "2nd", "3rd", "Final"])
     goal = st.selectbox("Career Goal", ["Data Scientist", "Web Developer", "AI Researcher", "Product Manager", "UX Designer"])
     interests = st.multiselect("What are you interested in?", ["AI", "Machine Learning", "Web Dev", "UI/UX", "Cloud", "Data Analytics"])

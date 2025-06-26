@@ -4,26 +4,172 @@
             {
                 "skill": "Python",
                 "area": "AI",
+                "level": "Beginner",
                 "project": "Number guessing game",
                 "course": "Python for Everybody - Coursera"
             },
             {
                 "skill": "Pandas",
                 "area": "Data Analytics",
+                "level": "Beginner",
                 "project": "Netflix Dataset Analysis",
                 "course": "Data Analysis with Python - FreeCodeCamp"
             },
             {
                 "skill": "SQL",
                 "area": "Data Analytics",
+                "level": "Intermediate",
                 "project": "Sales Data Dashboard",
                 "course": "Intro to SQL - Khan Academy"
             },
             {
                 "skill": "Scikit-learn",
                 "area": "Machine Learning",
+                "level": "Intermediate",
                 "project": "Titanic ML Predictor",
                 "course": "ML with Scikit-learn - Kaggle"
+            }
+        ]
+    },
+    "Web Developer": {
+        "timeline": [
+            {
+                "skill": "HTML & CSS",
+                "area": "Web Dev",
+                "level": "Beginner",
+                "project": "Personal Portfolio Website",
+                "course": "HTML & CSS Crash Course - Traversy Media (YouTube)"
+            },
+            {
+                "skill": "JavaScript",
+                "area": "Web Dev",
+                "level": "Beginner",
+                "project": "To-Do List App",
+                "course": "JavaScript Tutorial for Beginners - freeCodeCamp"
+            },
+            {
+                "skill": "Git & GitHub",
+                "area": "Web Dev",
+                "level": "Beginner",
+                "project": "Host your portfolio on GitHub Pages",
+                "course": "Git & GitHub for Beginners - Udemy"
+            },
+            {
+                "skill": "React.js",
+                "area": "Web Dev",
+                "level": "Intermediate",
+                "project": "Weather App using React and API",
+                "course": "React for Beginners - Scrimba"
+            },
+            {
+                "skill": "Node.js + Express",
+                "area": "Web Dev",
+                "level": "Intermediate",
+                "project": "Blog Website Backend",
+                "course": "Node.js Crash Course - Traversy Media"
+            },
+            {
+                "skill": "MongoDB",
+                "area": "Web Dev",
+                "level": "Intermediate",
+                "project": "User Authentication System",
+                "course": "MongoDB for Beginners - MongoDB University"
+            }
+        ]
+    },
+    "AI Researcher": {
+        "timeline": [
+            {
+                "skill": "Python",
+                "area": "AI",
+                "level": "Beginner",
+                "project": "Build a chatbot",
+                "course": "Python for AI - edX"
+            },
+            {
+                "skill": "Linear Algebra",
+                "area": "AI",
+                "level": "Beginner",
+                "project": "Visualize vector transformations",
+                "course": "Mathematics for ML - Coursera"
+            },
+            {
+                "skill": "PyTorch",
+                "area": "AI",
+                "level": "Intermediate",
+                "project": "Train an image classifier",
+                "course": "Intro to Deep Learning with PyTorch - Udacity"
+            },
+            {
+                "skill": "Transformer Models",
+                "area": "AI",
+                "level": "Advanced",
+                "project": "Fine-tune BERT",
+                "course": "HuggingFace Transformers Course"
+            }
+        ]
+    },
+    "UX Designer": {
+        "timeline": [
+            {
+                "skill": "Design Principles",
+                "area": "UI/UX",
+                "level": "Beginner",
+                "project": "Redesign a popular app\u2019s homepage",
+                "course": "Introduction to UX Design - Coursera"
+            },
+            {
+                "skill": "Figma",
+                "area": "UI/UX",
+                "level": "Beginner",
+                "project": "Mobile App UI Mockup",
+                "course": "Figma for Beginners - YouTube"
+            },
+            {
+                "skill": "User Research",
+                "area": "UI/UX",
+                "level": "Intermediate",
+                "project": "Conduct a user feedback session",
+                "course": "UX Research - Nielsen Norman Group"
+            },
+            {
+                "skill": "Prototyping",
+                "area": "UI/UX",
+                "level": "Intermediate",
+                "project": "Clickable prototype in Figma",
+                "course": "Prototyping in UX - LinkedIn Learning"
+            }
+        ]
+    },
+    "Product Manager": {
+        "timeline": [
+            {
+                "skill": "Market Research",
+                "area": "Product",
+                "level": "Beginner",
+                "project": "Analyze a market segment",
+                "course": "Intro to Market Research - Coursera"
+            },
+            {
+                "skill": "Roadmapping",
+                "area": "Product",
+                "level": "Beginner",
+                "project": "Create a product roadmap",
+                "course": "Product Management 101 - Udemy"
+            },
+            {
+                "skill": "Agile & Scrum",
+                "area": "Product",
+                "level": "Intermediate",
+                "project": "Run a sprint planning session",
+                "course": "Agile with Atlassian - Coursera"
+            },
+            {
+                "skill": "Product Analytics",
+                "area": "Product",
+                "level": "Intermediate",
+                "project": "A/B Test a feature",
+                "course": "Product Analytics - Reforge"
             }
         ]
     }
