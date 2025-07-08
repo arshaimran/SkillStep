@@ -152,7 +152,6 @@ Made with ❤️ by [Arsha Imran](https://github.com/arshaimran)
 
 This project is licensed under the [MIT License](LICENSE).
 
-````
 
 ---
 
