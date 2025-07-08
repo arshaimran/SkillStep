@@ -1,46 +1,33 @@
-import json
+import os
+import google.generativeai as genai
+from dotenv import load_dotenv
 
-def load_templates(path="templates.json"):
-    with open(path, "r") as f:
-        return json.load(f)
+# Load the API key
+load_dotenv()
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-def generate_timeline(goal, interests, current_skills, templates):
-    goal_template = templates.get(goal)
-    if not goal_template:
-        return ["❌ Sorry, no roadmap available for this goal."]
+def generate_timeline_with_gemini(goal, interests, current_skills):
+    prompt = f"""
+I am a student and want to become a {goal}.  
+Here are my current skills: {current_skills}.  
+These are the areas I'm interested in: {', '.join(interests)}.
 
-    learned_skills = [skill.strip().lower() for skill in current_skills.split(",")]
-    timeline = []
-    step = 1
+Please create a **concise, numbered roadmap (5–7 steps)** that will prepare me to become a {goal}.
 
-    # Group stages by level
-    levels = ["Beginner", "Intermediate", "Advanced"]
-    level_stages = {level: [] for level in levels}
+Each step must include:
+- One specific skill to learn
+- A simple, related project idea
+- A **free course/tutorial** recommendation (with the platform name)
 
-    for stage in goal_template["timeline"]:
-        level = stage.get("level", "Beginner")
-        if stage["skill"].lower() not in learned_skills and (not stage.get("area") or stage["area"] in interests):
-            level_stages[level].append(stage)
+The format should be:
+Step 1: Learn [Skill]  
+🛠 Project: [Project idea]  
+📚 Resource: [Course name] – [Platform]
 
-    for level in levels:
-        for stage in level_stages[level]:
-            entry = f"🪜 Step {step}:\n🔹 Learn: {stage['skill']}"
-            if stage.get("level"):
-                entry += f"\n🎯 Level: {stage['level']}"
-            if stage.get("project"):
-                entry += f"\n📌 Project: {stage['project']}"
-            if stage.get("course"):
-                entry += f"\n🎓 Course: {stage['course']}"
-            timeline.append(entry)
-            step += 1
+Make sure the steps build up to help me confidently achieve my goal.
+Avoid long paragraphs or extra text.
+"""
 
-        if not level_stages[level]:  # If no stages at this level, skip to next
-            continue
-
-        # Stop suggesting higher levels if current level not yet cleared
-        if level_stages[level]:
-            break
-
-    if not timeline:
-        return ["🎉 You’ve already covered all the basics! Time to level up!"]
-    return timeline
+    model = genai.GenerativeModel(model_name="gemini-1.5-flash") 
+    response = model.generate_content(prompt)
+    return response.text

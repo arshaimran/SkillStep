@@ -1,5 +1,11 @@
-from roadmap_generator import load_templates, generate_timeline
 import streamlit as st
+import os
+from dotenv import load_dotenv
+from roadmap_generator import generate_timeline_with_gemini
+
+# Load Gemini API key from .env
+load_dotenv()
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 st.set_page_config(page_title="SkillStep", layout="centered")
 st.title("🗺️ SkillStep")
@@ -26,9 +32,9 @@ with st.form("user_form"):
     st.subheader("🧠 Your Skills")
     current_skills = st.text_area("Skills you already know (comma-separated)", placeholder="e.g., Python, SQL, Excel")
 
-    submitted = st.form_submit_button("Generate Timeline")
+    submitted = st.form_submit_button("Generate Roadmap")
 
-# Validate *after* form is submitted
+# Validate input
 if submitted:
     if not name.strip():
         st.error("❗ Please enter your name.")
@@ -42,8 +48,7 @@ if submitted:
         st.error("❗ Please select at least one interest.")
     else:
         st.success(f"✅ Thanks {name}! Here's your personalized roadmap:")
-        templates = load_templates()
-        timeline = generate_timeline(goal, interests, current_skills, templates)
+        timeline = generate_timeline_with_gemini(goal, interests, current_skills)
 
-        for step in timeline:
-            st.markdown(f"---\n{step}")
+        
+    st.markdown(timeline)
