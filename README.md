@@ -1,157 +1,69 @@
+# SkillStep 🚀
+### AI-powered career guidance — get a personalized learning roadmap in seconds
 
-# 🗺️ SkillStep
-
-**SkillStep** is a personalized career roadmap generator built with Python and Streamlit.  
-It helps students and aspiring professionals visualize the skills, courses, and projects they need to reach their career goals — based on what they already know and what they’re interested in.
-
----
-
-## 🚀 Features
-
-- 🎯 Select your degree, year, and career goal  
-- 🧠 Add your interests and current skills  
-- 🤖 Gemini-powered dynamic roadmap generation *(new)*  
-- 📚 Automatically generates a step-by-step skill learning path  
-- 🛠️ Recommends projects and free learning resources  
-- ⚡ Simple and clean Streamlit web interface  
+🔗 **[Live Demo](https://skillstep.streamlit.app)** &nbsp;|&nbsp; Built with Python, Streamlit, and Gemini API
 
 ---
 
-## 🛠️ Tech Stack
+## What it does
 
-- **Frontend/UI:** [Streamlit](https://streamlit.io/)  
-- **Backend Logic:** Python  
-- **AI Integration:** [Gemini 1.5 Flash](https://ai.google.dev) via `google-generativeai`  
-- *(Legacy)* `templates.json` for static roadmaps  
-- *(Optional)* Udemy API integration for course suggestions  
+SkillStep takes your current skills and your target job role, then generates a personalized step-by-step learning roadmap using Google's Gemini AI.
 
----
+Instead of drowning in generic "learn Python" advice, you get:
+- A gap analysis between where you are and where you want to be
+- A prioritized list of skills to learn, in the right order
+- Recommended resources tailored to your goal
 
-## 🤖 Gemini API Integration
-
-SkillStep uses **Google’s Gemini 1.5 Flash model** to generate short, goal-specific learning roadmaps based on:
-
-- Your career goal (e.g. *Data Scientist*)
-- Your current skills (e.g. *Python, SQL*)
-- Your areas of interest (e.g. *AI, Web Dev*)
-
-Each roadmap step includes:
-- A **skill to learn**
-- A **mini project** to apply it
-- A **free course/tutorial** suggestion
-
-### 🔐 To use Gemini:
-1. Create a `.env` file in the project root  
-2. Add your API key:
-   ```env
-   GEMINI_API_KEY=your_api_key_here
-
+No sign-up. No fluff. Just a roadmap.
 
 ---
 
-## 📁 Project Structure
+## Screenshots
 
-```
-skillstep/
-├── app.py                # Streamlit frontend
-├── roadmap_generator.py  # Timeline generation logic (Gemini integrated)
-├── templates.json        # Static templates (fallback)
-├── test_api.py           # Model access tester (optional)
-├── .env                  # Gemini API key (excluded from Git)
-└── README.md             # Project documentation
-```
+> *<img width="1899" height="746" alt="image" src="https://github.com/user-attachments/assets/87546c28-fd16-47f0-b41e-f276679b5f7a" />
+<img width="1363" height="863" alt="image" src="https://github.com/user-attachments/assets/8c396570-24a9-4029-91ca-49510b38a3d3" />
+
+*
 
 ---
 
-## 🧪 How to Run Locally
+## Tech Stack
 
-### 1. Clone the Repo
+| Layer | Tool |
+|---|---|
+| Frontend / UI | Streamlit |
+| AI Engine | Google Gemini API |
+| Language | Python 3.10+ |
+| Deployment | Streamlit Community Cloud |
+
+---
+
+## Run Locally
 
 ```bash
 git clone https://github.com/arshaimran/SkillStep.git
 cd SkillStep
-```
-
-### 2. Create a Virtual Environment
-
-```bash
-python -m venv venv
-venv\Scripts\activate      # on Windows
-source venv/bin/activate   # on Mac/Linux
-```
-
-### 3. Install Dependencies
-
-```bash
 pip install -r requirements.txt
 ```
 
-> 💡 If you don’t have `requirements.txt`, just run:
-
-```bash
-pip install streamlit google-generativeai python-dotenv
+Create a `.env` file in the root:
+```
+GEMINI_API_KEY=your_api_key_here
 ```
 
-### 4. Set Up Your `.env`
-
-Create a `.env` file in the project root with your Gemini API key:
-
-```env
-GEMINI_API_KEY=your_actual_key_here
-```
-
-### 5. Run the App
-
+Then run:
 ```bash
 streamlit run app.py
 ```
 
 ---
 
-## 🌱 Example Career Goals
+## Why I built this
 
-* Data Scientist
-* Web Developer
-* AI Researcher
-* Product Manager
-* UX Designer
+Most career advice is generic. I wanted a tool that actually looks at *your* background and tells you *your* next step — not a one-size-fits-all curriculum. SkillStep does that in under 30 seconds.
 
 ---
 
-## 📌 Roadmap Output Format (Gemini-powered)
+## Contact
 
-```
-Step 1: Learn Python Basics  
-🛠 Project: Build a calculator  
-📚 Resource: "Python for Beginners" – freeCodeCamp
-
-Step 2: Learn SQL  
-🛠 Project: Build a student database  
-📚 Resource: "Intro to SQL" – Mode Analytics
-...
-```
-
----
-
-## 💡 Future Improvements
-
-* 🔄 Dynamic course suggestions from Udemy or Coursera APIs
-* 💾 Export roadmap as PDF or save user progress
-* 🎨 Visualize roadmap using timeline charts or skill graphs
-* 👥 Add multi-user login (educators, students, etc.)
-
----
-
-## 👩‍💻 Author
-
-Made with ❤️ by [Arsha Imran](https://github.com/arshaimran)
-
----
-
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
-
----
-
+Built by [Arsha Imran](https://www.linkedin.com/in/arsha-imran-ba13341b1/) · Open to freelance projects involving data, dashboards, and AI tools.
